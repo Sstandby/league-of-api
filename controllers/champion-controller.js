@@ -5,9 +5,9 @@ model.export = {
     add_champion: function (req, res){
 
         let champion = new Champion({
-            Nombre: req.body.nombre
-            Descripción: req.body.descripción
-            Tipo: req.body.tipo
+            Nombre: req.body.nombre,
+            Descripción: req.body.descripción,
+            Tipo: req.body.tipo,
             Vida_inicial: req.body.vida_incial
         })
 
@@ -33,7 +33,7 @@ model.export = {
                 message: `¡Se ha añadido correctamente al campeon`,
                 data: result,
                 code: 10
-            }):
+            });
         })     
     }
 
