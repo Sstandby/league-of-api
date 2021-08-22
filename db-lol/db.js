@@ -13,7 +13,7 @@ var MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/lol-rest'
  *
 */
 
-mongoose.connect('mongodb://localhost/lol-rest', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost/lol-rest', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
         .then(() => console.log('Se ha conectado existosamente a mongodb'))
         .catch(error => console.log(`No se ha conectado existosamente a mongodb por el error; ${error.message}`));
 
