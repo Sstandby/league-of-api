@@ -1,7 +1,7 @@
 var router = require('express').Router()
-var champion = require('./champion')
+var champions = require('./champions')
 
-router.use('/champion', champion)
+router.use('/', champions)
 
 router.get('/', function(req, res){
     res.status(200).json({

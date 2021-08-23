@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
 
+require('./db-lol/db')
 var router = require('./routes')
 
 /* 
@@ -23,3 +24,4 @@ app.listen(8080, () => {
     console.log("El servidor esta encendido en el puerto 8080")
 })
 
+module.exports = app
