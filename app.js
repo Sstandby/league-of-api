@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
+const morgan = require('morgan')
+const cors = require('cors')
 const app = express();
 
 require('./db-lol/db')
@@ -17,6 +19,11 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use('/api-rest', router)
+
+// middlewares chidos
+
+app.use(morgan('combined'))
+app.use(cors())
 
 // Iniciamos nuestro servidor mediante el puerto 8080
 
