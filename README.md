@@ -32,4 +32,14 @@ npm i -D istanbul
 La verdad hasta ahora aprendo el uso de mongodb y es sencillo, sin miedo al exito! :)
 
 Use esto: https://comoinstalar.me/como-instalar-mongodb-en-freebsd-12/
+
 Y me guie de esto otro: https://mongoosejs.com/
+
+# Para importar un JSON base
+
+En donde dice lol-rest debe ir la db que hayan creado, y recuerden que el JSON debe seguir el esquema creado en models. ^^
+
+
+```
+mongoimport --db lol-rest --collection champion --drop --file champion_example.json --jsonArray
+```
